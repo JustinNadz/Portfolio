@@ -88,14 +88,37 @@ const ProjectWizard = ({ embedded = false, onClose }) => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Format the project request data for email
+    const emailSubject = `New Project Request: ${data.projectName}`;
+    const emailBody = `
+New Project Request Submitted
+
+Project Details:
+- Project Name: ${data.projectName}
+- Project Type: ${data.projectType}
+- Description: ${data.description}
+- Timeline: ${data.timeline}
+- Budget: ${data.budget}
+
+Contact Information:
+- Name: ${data.name}
+- Email: ${data.email}
+- Phone: ${data.phone}
+
+This request was submitted through your portfolio website.
+    `.trim();
+
+    // Create mailto link with the project request data
+    const mailtoLink = `mailto:butuandeveloper@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open the user's default email client
+    window.open(mailtoLink, '_blank');
     
     // Clear saved progress
     localStorage.removeItem('projectWizardProgress');
     
     setIsSubmitting(false);
-    message.success('Project request submitted successfully! We will reach out within 24 hours.');
+    message.success('Project request submitted successfully! Your email client will open to send the request to our team.');
     
     // Reset form
     Object.keys(data).forEach(key => setValue(key, ''));

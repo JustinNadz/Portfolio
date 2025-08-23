@@ -32,12 +32,33 @@ const ScheduleCall = ({ onClose }) => {
   const onFinish = async (values) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Format the call scheduling data for email
+    const emailSubject = `Call Scheduling Request: ${values.callType}`;
+    const emailBody = `
+Call Scheduling Request Submitted
+
+Call Details:
+- Call Type: ${values.callType}
+- Preferred Date: ${values.date ? values.date.format('MMMM DD, YYYY') : 'Not specified'}
+- Brief Description: ${values.description || 'None'}
+
+Contact Information:
+- Name: ${values.name}
+- Email: ${values.email}
+- Phone: ${values.phone}
+
+This call scheduling request was submitted through your portfolio website.
+    `.trim();
+
+    // Create mailto link with the call scheduling data
+    const mailtoLink = `mailto:butuandeveloper@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open the user's default email client
+    window.open(mailtoLink, '_blank');
     
     console.log('Scheduling call:', values);
     
-    message.success('Call scheduled successfully! We will contact you within 24 hours.');
+    message.success('Call scheduling request submitted! Your email client will open to send the request to our team.');
     setIsSubmitting(false);
     onClose();
   };

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useTransform } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-  import { Github, Linkedin, Twitter, Mail, Instagram, Star, Award, Users, Zap } from 'lucide-react';
+  import { Github, Linkedin, Facebook, Mail, Instagram, Star, Award, Users, Zap } from 'lucide-react';
 
 const Team = () => {
 
@@ -98,7 +98,7 @@ const Team = () => {
       social: {
         github: "https://github.com/kenshi-ucl",
         instagram: "#",
-        twitter: "#",
+        facebook: "https://www.facebook.com/kentadrian.sabayday",
         email: "mailto:kentadrianpalaciosabayday@gmail.com"
       }
     },
@@ -114,7 +114,7 @@ const Team = () => {
       social: {
         github: "https://github.com/JustinNadz",
         instagram: "https://www.instagram.com/khabi_itzx/?igsh=OXlrZ3hwNXhncGd0&utm_source=qr#",
-        twitter: "#",
+        facebook: "https://www.facebook.com/justin.pecasales",
         email: "mailto:justinnadela2@gmail.com"
       }
     },
@@ -129,14 +129,14 @@ const Team = () => {
       projects: "12+ Projects",
       social: {
         github: "https://github.com/cHITo-CBR",
-        instagram: "#",
-        twitter: "#",
+        instagram: "https://www.instagram.com/_chis.raps05?igsh=ODgyMXpyeGVnZWtl",
+        facebook: "https://www.facebook.com/christpher.raper",
         email: "mailto:chistopher.raper@urios.edu.ph"
       }
     },
     {
       id: 4,
-      name: "Nazz Buenavidez",
+      name: "Nazir Buenavidez",
       role: "Front-end Developer, UI/UX Designer",
       image: "",
       bio: "Creative frontend developer and UI/UX designer specializing in modern web interfaces. Combines technical expertise with design thinking to create engaging user experiences.",
@@ -146,8 +146,8 @@ const Team = () => {
       social: {
         github: "#",
         instagram: "#",
-        twitter: "#",
-        email: "mailto:nazz.buenavidez@example.com"
+        facebook: "https://www.facebook.com/nazir.buenavidez",
+        email: "mailto:nazir.buenavidez@example.com"
       }
     },
     {
@@ -161,17 +161,33 @@ const Team = () => {
       projects: "20+ Projects",
       social: {
         github: "#",
-        instagram: "#",
-        twitter: "#",
+        instagram: "https://www.instagram.com/unblankpage2/",
+        facebook: "#",
         email: "mailto:donnel.simbajon@example.com"
+      }
+    },
+    {
+      id: 6,
+      name: "Lore Daven J. Martinez",
+      role: "UI/UX Designer & Team Analyst",
+      image: "/images/d57db220-1e2a-4173-9b63-0deb85938b6e.jpg",
+      bio: "Passionate UI/UX designer and strategic team analyst with a unique blend of creative design skills and analytical thinking. Specializes in creating intuitive user experiences while providing data-driven insights to enhance team performance and project success.",
+      skills: ["UI/UX Design", "Team Analysis", "Rule of Law", "Legal Compliance", "Figma", "User Research", "Data Analysis", "Prototyping"],
+      experience: "2+ years",
+      projects: "25+ Projects",
+      social: {
+        github: "https://github.com/loredaven",
+        instagram: "https://www.instagram.com/dvnjmm/?igsh=MTlnYzNyNjV0Z2pjZg%3D%3D#",
+        facebook: "https://www.facebook.com/LoreDavenMartinez",
+        email: "mailto:Martinezloredaven@gmail.com"
       }
     }
   ];
 
   const stats = [
-    { value: "5", label: "Developers", icon: Users, color: "text-blue-500" },
+    { value: "6", label: "Team Members", icon: Users, color: "text-blue-500" },
     { value: "5+", label: "Years Experience", icon: Star, color: "text-yellow-500" },
-    { value: "95+", label: "Projects Delivered", icon: Award, color: "text-green-500" },
+    { value: "120+", label: "Projects Delivered", icon: Award, color: "text-green-500" },
     { value: "Full-Stack", label: "Capabilities", icon: Zap, color: "text-purple-500" }
   ];
 
@@ -363,7 +379,7 @@ const Team = () => {
                     >
                       {platform === 'github' && <Github className="w-4 h-4" />}
                       {platform === 'linkedin' && <Linkedin className="w-4 h-4" />}
-                      {platform === 'twitter' && <Twitter className="w-4 h-4" />}
+                      {platform === 'facebook' && <Facebook className="w-4 h-4" />}
                       {platform === 'instagram' && <Instagram className="w-4 h-4" />}
                       {platform === 'email' && <Mail className="w-4 h-4" />}
                     </motion.a>
