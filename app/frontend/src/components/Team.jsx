@@ -147,7 +147,7 @@ const Team = () => {
         github: "#",
         instagram: "#",
         facebook: "https://www.facebook.com/nazir.buenavidez",
-        email: "mailto:nazir.buenavidez@example.com"
+        email: "mailto:nazzbuenavidez@gmail.com"
       }
     },
     {
@@ -181,13 +181,45 @@ const Team = () => {
         facebook: "https://www.facebook.com/LoreDavenMartinez",
         email: "mailto:Martinezloredaven@gmail.com"
       }
+    },
+    {
+      id: 7,
+      name: "Jowehl Josh Radaza",
+      role: "Full-Stack Developer & Cybersecurity Specialist",
+      image: "/images/428036581_7479069328814493_5971334746045963956_n.jpg",
+      bio: "Experienced full-stack developer with expertise in cybersecurity and secure application development. National Hack4Gov participant, combining technical development skills with security best practices to create robust and protected web solutions.",
+      skills: ["Full-Stack Development", "Cybersecurity", "React", "Node.js", "Python", "Security Auditing", "Penetration Testing", "Secure Coding"],
+      experience: "3+ years",
+      projects: "22+ Projects",
+      social: {
+        github: "https://github.com/j0th4r",
+        instagram: "#",
+        facebook: "https://www.facebook.com/jowehljoshgabriel.radaza",
+        email: "mailto:jowehl.radaza@urios.edu.ph"
+      }
+    },
+    {
+      id: 8,
+      name: "John Paul Linogao",
+      role: "Full-Stack Developer",
+      image: "/images/473537832_2140075436427735_8934525153687684077_n.jpg",
+      bio: "Skilled full-stack developer with expertise in modern web technologies and responsive application development. Creates efficient and scalable solutions across the entire development stack with a focus on web applications.",
+      skills: ["Full-Stack Development", "React", "Node.js", "Python", "JavaScript", "TypeScript", "Database Design", "API Development", "Web Development", "Cybersecurity"],
+      experience: "2+ years",
+      projects: "18+ Projects",
+      social: {
+        github: "https://github.com/Josh6728",
+        instagram: "#",
+        facebook: "https://www.facebook.com/pauljohn.castrodes",
+        email: "mailto:johnpaul.linogao@example.com"
+      }
     }
   ];
 
   const stats = [
-    { value: "6", label: "Team Members", icon: Users, color: "text-blue-500" },
+    { value: "8", label: "Team Members", icon: Users, color: "text-blue-500" },
     { value: "5+", label: "Years Experience", icon: Star, color: "text-yellow-500" },
-    { value: "120+", label: "Projects Delivered", icon: Award, color: "text-green-500" },
+    { value: "160+", label: "Projects Delivered", icon: Award, color: "text-green-500" },
     { value: "Full-Stack", label: "Capabilities", icon: Zap, color: "text-purple-500" }
   ];
 
