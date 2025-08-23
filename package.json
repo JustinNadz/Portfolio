@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio project root with frontend build configuration",
   "scripts": {
-    "build": "cd app/frontend && npm install && npm run build",
+    "build": "cd app/frontend && npm install && npx vite build",
     "dev": "cd app/frontend && npm run dev",
     "preview": "cd app/frontend && npm run preview"
   },
