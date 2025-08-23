@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-root",
+  "version": "1.0.0",
+  "description": "Portfolio project root with frontend build configuration",
+  "scripts": {
+    "build": "cd app/frontend && npm install && npm run build",
+    "dev": "cd app/frontend && npm run dev",
+    "preview": "cd app/frontend && npm run preview"
+  },
+  "private": true
+}
