@@ -1,8 +1,8 @@
-// Mock data for ButDev company portfolio
+// Mock data for CantiumCode company portfolio
 
 export const companyInfo = {
-  name: "ButDev",
-  tagline: "Building Tomorrow's Digital Solutions",
+  name: "CantiumCode",
+  tagline: "We are Innovators. We are Builders. We Create Read Update and Delete Cantium Code",
   mission: "We craft exceptional digital experiences through innovative development and creative problem-solving. Specialized in full-stack solutions, system architecture, and cutting-edge technologies.",
   services: [
     "Full-Stack Development",
@@ -137,21 +137,21 @@ export const testimonials = [
     id: 1,
     name: "Jennifer Martinez",
     role: "CTO, TechStartup Inc",
-    content: "ButDev delivered our capstone project ahead of schedule. Their full-stack expertise and attention to detail exceeded our expectations.",
+    content: "CantiumCode delivered our capstone project ahead of schedule. Their full-stack expertise and attention to detail exceeded our expectations.",
     rating: 5
   },
   {
     id: 2,
     name: "Robert Chen",
     role: "Product Manager, InnovateCorp",
-    content: "Working with ButDev was seamless. They understood our complex requirements and built a robust system that scales beautifully.",
+    content: "Working with CantiumCode was seamless. They understood our complex requirements and built a robust system that scales beautifully.",
     rating: 5
   },
   {
     id: 3,
     name: "Diana Foster",
     role: "CEO, EduTech Solutions",
-    content: "The team's technical knowledge and project management skills are outstanding. They've become our go-to development partner.",
+    content: "The team's technical knowledge and project management skills are outstanding. CantiumCode has become our go-to development partner.",
     rating: 5
   }
 ];

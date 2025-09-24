@@ -5,7 +5,7 @@ import About from './About';
 import Services from './Services';
 import Team from './Team';
 import Projects from './Projects';
-import Testimonials from './Testimonials';
+// Testimonials removed
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -25,7 +25,7 @@ const HomePage = () => {
         <Services />
         <Team />
         <Projects />
-        <Testimonials />
+        {/* Testimonials removed */}
         <Contact />
       </main>
       <Footer />

@@ -46,7 +46,15 @@ const Header = () => {
               e.currentTarget.style.textShadow = 'none';
             }}
           >
-            ButDev
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/552054487_1214782360409562_2355493973640114388_n-removebg-preview.png"
+                alt="CantiumCode Logo"
+                className="h-10 md:h-12 w-auto select-none"
+                draggable="false"
+              />
+              <span>CantiumCode</span>
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">

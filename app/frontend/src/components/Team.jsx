@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useTransform } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-  import { Github, Linkedin, Facebook, Mail, Instagram, Star, Award, Users, Zap } from 'lucide-react';
+  import { Github, Linkedin, Facebook, Mail, Instagram, Users } from 'lucide-react';
 
 const Team = () => {
 
@@ -135,22 +135,6 @@ const Team = () => {
       }
     },
     {
-      id: 4,
-      name: "Nazir Buenavidez",
-      role: "Front-end Developer, UI/UX Designer",
-      image: "",
-      bio: "Creative frontend developer and UI/UX designer specializing in modern web interfaces. Combines technical expertise with design thinking to create engaging user experiences.",
-      skills: ["ReactJS", "Tailwind CSS", "Foundation", "Skeleton", "Bulma", "UI Kit", "Figma"],
-      experience: "2+ years",
-      projects: "18+ Projects",
-      social: {
-        github: "#",
-        instagram: "#",
-        facebook: "https://www.facebook.com/nazir.buenavidez",
-        email: "mailto:nazzbuenavidez@gmail.com"
-      }
-    },
-    {
       id: 5,
       name: "Donnel Simbajon",
       role: "Front-end & Backend Developer",
@@ -165,63 +149,10 @@ const Team = () => {
         facebook: "#",
         email: "mailto:donnel.simbajon@example.com"
       }
-    },
-    {
-      id: 6,
-      name: "Lore Daven J. Martinez",
-      role: "UI/UX Designer & Team Analyst",
-      image: "/images/d57db220-1e2a-4173-9b63-0deb85938b6e.jpg",
-      bio: "Passionate UI/UX designer and strategic team analyst with a unique blend of creative design skills and analytical thinking. Specializes in creating intuitive user experiences while providing data-driven insights to enhance team performance and project success.",
-      skills: ["UI/UX Design", "Team Analysis", "Rule of Law", "Legal Compliance", "Figma", "User Research", "Data Analysis", "Prototyping"],
-      experience: "2+ years",
-      projects: "25+ Projects",
-      social: {
-        github: "https://github.com/loredaven",
-        instagram: "https://www.instagram.com/dvnjmm/?igsh=MTlnYzNyNjV0Z2pjZg%3D%3D#",
-        facebook: "https://www.facebook.com/LoreDavenMartinez",
-        email: "mailto:Martinezloredaven@gmail.com"
-      }
-    },
-    {
-      id: 7,
-      name: "Jowehl Josh Radaza",
-      role: "Full-Stack Developer & Cybersecurity Specialist",
-      image: "/images/428036581_7479069328814493_5971334746045963956_n.jpg",
-      bio: "Experienced full-stack developer with expertise in cybersecurity and secure application development. National Hack4Gov participant, combining technical development skills with security best practices to create robust and protected web solutions.",
-      skills: ["Full-Stack Development", "Cybersecurity", "React", "Node.js", "Python", "Security Auditing", "Penetration Testing", "Secure Coding"],
-      experience: "3+ years",
-      projects: "22+ Projects",
-      social: {
-        github: "https://github.com/j0th4r",
-        instagram: "#",
-        facebook: "https://www.facebook.com/jowehljoshgabriel.radaza",
-        email: "mailto:jowehl.radaza@urios.edu.ph"
-      }
-    },
-    {
-      id: 8,
-      name: "John Paul Linogao",
-      role: "Full-Stack Developer",
-      image: "/images/473537832_2140075436427735_8934525153687684077_n.jpg",
-      bio: "Skilled full-stack developer with expertise in modern web technologies and responsive application development. Creates efficient and scalable solutions across the entire development stack with a focus on web applications.",
-      skills: ["Full-Stack Development", "React", "Node.js", "Python", "JavaScript", "TypeScript", "Database Design", "API Development", "Web Development", "Cybersecurity"],
-      experience: "2+ years",
-      projects: "18+ Projects",
-      social: {
-        github: "https://github.com/Josh6728",
-        instagram: "#",
-        facebook: "https://www.facebook.com/pauljohn.castrodes",
-        email: "mailto:johnpaul.linogao@example.com"
-      }
     }
   ];
 
-  const stats = [
-    { value: "8", label: "Team Members", icon: Users, color: "text-blue-500" },
-    { value: "5+", label: "Years Experience", icon: Star, color: "text-yellow-500" },
-    { value: "160+", label: "Projects Delivered", icon: Award, color: "text-green-500" },
-    { value: "Full-Stack", label: "Capabilities", icon: Zap, color: "text-purple-500" }
-  ];
+  // Stats section removed
 
   const handleMouseMove = (event) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -323,32 +254,7 @@ const Team = () => {
           </motion.p>
         </motion.div>
 
-        {/* Team Stats */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center group"
-            >
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-                className={`inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-lg mb-4 group-hover:shadow-xl transition-all duration-300 ${stat.color}`}
-              >
-                <stat.icon className="w-8 h-8" />
-              </motion.div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Team Stats removed */}
 
         {/* Team Members Grid */}
         <motion.div
@@ -371,15 +277,16 @@ const Team = () => {
               onHoverStart={() => setHoveredMember(member.id)}
               onHoverEnd={() => setHoveredMember(null)}
               onMouseMove={handleMouseMove}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+              tabIndex={0}
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500/60 hover:ring-2 hover:ring-cyan-500/60"
             >
               {/* Member Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <motion.img
                   src={member.image}
                   alt={member.name}
-
-                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-center"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 />
@@ -390,6 +297,9 @@ const Team = () => {
                   initial={{ opacity: 0 }}
                   animate={hoveredMember === member.id ? { opacity: 1 } : { opacity: 0 }}
                 />
+
+                {/* Persistent readability gradient at bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 
                 {/* Social links on hover */}
                 <motion.div
@@ -417,39 +327,13 @@ const Team = () => {
                     </motion.a>
                   ))}
                 </motion.div>
-              </div>
-
-
-              {/* Member Info */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                    {member.name}
-                  </h3>
-
-                <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {member.bio}
-                </p>
-
-                {/* Skills */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {member.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
-                    >
-                      {skill}
-                  </span>
-          ))}
-        </div>
-
-
-                {/* Experience & Projects */}
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>{member.experience}</span>
-                  <span>{member.projects} projects</span>
+                {/* Name overlay on image (no background container) */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-0 pointer-events-none">
+                  <h3 className="text-white text-lg md:text-xl font-semibold m-0 drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)] tracking-wide translate-y-1 group-hover:translate-y-0 transition-all duration-300">{member.name}</h3>
                 </div>
               </div>
+
+
 
 
               {/* Animated border effect */}

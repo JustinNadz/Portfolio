@@ -158,7 +158,7 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants} className="mb-4">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-100 to-purple-100 text-purple-700 rounded-full text-sm font-medium">
               <Code className="w-4 h-4" />
               My Work
             </span>
@@ -169,7 +169,7 @@ const Projects = () => {
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
           >
             Featured
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-cyan-500 to-purple-600 bg-clip-text text-transparent">
               Projects
             </span>
           </motion.h2>
@@ -198,7 +198,7 @@ const Projects = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25'
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-purple-600/25'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
               }`}
             >
@@ -275,7 +275,7 @@ const Projects = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-cyan-600">
                     {project.title}
                   </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
@@ -299,7 +299,7 @@ const Projects = () => {
                   onClick={() => window.open('https://github.com/Butuan-Dev', '_blank')}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 cursor-pointer"
+                  className="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-purple-600 transition-colors duration-300 cursor-pointer"
                 >
                   <span>View Project</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -330,7 +330,7 @@ const Projects = () => {
             onClick={() => window.open('https://github.com/Butuan-Dev', '_blank')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-600/25 hover:bg-blue-700 transition-all duration-300 cursor-pointer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg shadow-lg shadow-purple-600/25 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 cursor-pointer"
           >
             <span>View All Projects</span>
             <ArrowRight className="w-5 h-5" />
