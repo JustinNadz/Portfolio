@@ -149,6 +149,22 @@ const Team = () => {
         facebook: "#",
         email: "mailto:donnel.simbajon@example.com"
       }
+    },
+    {
+      id: 6,
+      name: "John Viray",
+      role: "Front-end Developer",
+      image: "/images/24ffec49-ce3d-4c0a-80a4-d58a4d6cbc5a.jpg",
+      bio: "Frontend developer passionate about building clean, responsive UIs.",
+      skills: ["React", "JavaScript", "Tailwind CSS"],
+      experience: "1+ years",
+      projects: "5+ Projects",
+      social: {
+        github: "#",
+        instagram: "#",
+        facebook: "#",
+        email: "mailto:john.viray@example.com"
+      }
     }
   ];
 
@@ -250,7 +266,7 @@ const Team = () => {
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Our skilled team of 4 developers combines senior expertise with specialized skills in frontend, backend, and UI/UX design to deliver exceptional digital solutions.
+            Our skilled team of 5 developers combines senior expertise with specialized skills in frontend, backend, and UI/UX design to deliver exceptional digital solutions.
           </motion.p>
         </motion.div>
 
